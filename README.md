@@ -97,13 +97,16 @@ Authorisation and Authentication has been incorporated. To access any of the API
   "content": "This is the content of the new post."
   }
 - **Example Response**:
-  {
+
+```json
+{
   "id": 3,
   "title": "Post with title 3",
   "content": "the test content of post with title \"Post with title 3\"",
   "author": "dhananjay",
   "published_date": "2024-07-17T13:34:05.164375Z"
-  }
+}
+```
 
 ###### Update an existing post
 
@@ -116,20 +119,22 @@ Authorisation and Authentication has been incorporated. To access any of the API
   "content": "Updated content of post."
   }
 - **Example Response**:
-  {
+
+```json
+{
   "id": 3,
   "title": "Updated Title",
-  "content": "Updated content of post,
+  "content": "Updated Content",
   "author": "dhananjay",
-  "published_date": "2024-07-16T20:02:41.969903Z"
-  }
+  "published_date": "2024-07-17T13:34:05.164375Z"
+}
+```
 
 ###### Delete an existing post
 
 - **URL**: `/api/posts/<id>`
 - **Method**: `DELETE`
 - **Description**: Delete blog post by its ID.
-- **Example Request**:
 
 ###### Create a comment for existing post
 
@@ -141,13 +146,15 @@ Authorisation and Authentication has been incorporated. To access any of the API
   "text": "test comment"
   }
 - **Example Response**:
+  ```json
   {
-  "id": 5,
-  "author": "dhananjay",
-  "text": "second comment for post 2",
-  "created_date": "2024-07-17T13:51:43.395621Z",
-  "post": 2
+    "id": 5,
+    "author": "dhananjay",
+    "text": "second comment for post 2",
+    "created_date": "2024-07-17T13:51:43.395621Z",
+    "post": 2
   }
+  ```
 
 ###### Retrieve comments on a post
 
@@ -155,26 +162,29 @@ Authorisation and Authentication has been incorporated. To access any of the API
 - **Method**: `GET`
 - **Description**: retrieve a list of the comments on a blog post by its ID.
 - **Example Response**:
-  [
+
+```json
+[
   {
-  "id": 2,
-  "author": "dhananjay",
-  "text": "comment for post 2",
-  "created_date": "2024-07-17T09:16:12.716934Z",
-  "post": 2
+    "id": 2,
+    "author": "dhananjay",
+    "text": "comment for post 2",
+    "created_date": "2024-07-17T09:16:12.716934Z",
+    "post": 2
   },
   {
-  "id": 3,
-  "author": "dhananjay",
-  "text": "another comment for post 2",
-  "created_date": "2024-07-17T09:16:55.335763Z",
-  "post": 2
+    "id": 3,
+    "author": "dhananjay",
+    "text": "another comment for post 2",
+    "created_date": "2024-07-17T09:16:55.335763Z",
+    "post": 2
   },
   {
-  "id": 4,
-  "author": "dhananjay",
-  "text": "second comment for post 2",
-  "created_date": "2024-07-17T13:50:48.076376Z",
-  "post": 2
+    "id": 4,
+    "author": "dhananjay",
+    "text": "second comment for post 2",
+    "created_date": "2024-07-17T13:50:48.076376Z",
+    "post": 2
   }
-  ]
+]
+```
